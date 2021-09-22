@@ -28,7 +28,7 @@ export default function App() {
           >
               <div>
                   <span className="navbar-brand mb-0 h1 font-weight-bold text-white">
-                      <i className="bi bi-github"></i> GitHub User Search App
+                      <i className="bi bi-github"></i> GitHub API Users Search App
                   </span>
               </div>
               <div>
