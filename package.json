@@ -1,6 +1,7 @@
 {
   "name": "github-api-users-search-app",
   "version": "0.1.0",
+  "homepage": "https://vadimgierko.github.io/github-api-users-search-app",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
@@ -16,6 +17,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
