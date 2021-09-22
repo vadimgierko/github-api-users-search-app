@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/github-api-users-search-app/static/css/main.f43ae992.chunk.css",
+    "main.js": "/github-api-users-search-app/static/js/main.1c641029.chunk.js",
+    "main.js.map": "/github-api-users-search-app/static/js/main.1c641029.chunk.js.map",
+    "runtime-main.js": "/github-api-users-search-app/static/js/runtime-main.06daac72.js",
+    "runtime-main.js.map": "/github-api-users-search-app/static/js/runtime-main.06daac72.js.map",
+    "static/css/2.b59e561e.chunk.css": "/github-api-users-search-app/static/css/2.b59e561e.chunk.css",
+    "static/js/2.a7f0a1e7.chunk.js": "/github-api-users-search-app/static/js/2.a7f0a1e7.chunk.js",
+    "static/js/2.a7f0a1e7.chunk.js.map": "/github-api-users-search-app/static/js/2.a7f0a1e7.chunk.js.map",
+    "index.html": "/github-api-users-search-app/index.html",
+    "static/css/2.b59e561e.chunk.css.map": "/github-api-users-search-app/static/css/2.b59e561e.chunk.css.map",
+    "static/css/main.f43ae992.chunk.css.map": "/github-api-users-search-app/static/css/main.f43ae992.chunk.css.map",
+    "static/js/2.a7f0a1e7.chunk.js.LICENSE.txt": "/github-api-users-search-app/static/js/2.a7f0a1e7.chunk.js.LICENSE.txt",
+    "static/media/bootstrap-icons.css": "/github-api-users-search-app/static/media/bootstrap-icons.dfd0ea12.woff2"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.06daac72.js",
+    "static/css/2.b59e561e.chunk.css",
+    "static/js/2.a7f0a1e7.chunk.js",
+    "static/css/main.f43ae992.chunk.css",
+    "static/js/main.1c641029.chunk.js"
+  ]
+}
