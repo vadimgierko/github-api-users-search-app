@@ -1,4 +1,4 @@
-function Bio(props) {
+export default function Bio(props) {
     return (
         <div className="col-md-4">
             <div className="card mb-3">

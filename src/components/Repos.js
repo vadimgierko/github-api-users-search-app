@@ -1,4 +1,6 @@
-function Repos({reposData, userName}) {
+import ReposGroup from "./ReposGroup";
+
+export default function Repos({reposData, userName}) {
     console.log(reposData);
     
     const repos = reposData.slice();

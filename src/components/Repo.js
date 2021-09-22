@@ -1,4 +1,4 @@
-function Repo({repoData, userName}) {
+export default function Repo({repoData, userName}) {
     if (repoData) {
         const pagesLink = `https://${userName}.github.io/${repoData.name}/`;
         return (
@@ -6,9 +6,9 @@ function Repo({repoData, userName}) {
                 <div className="card-header">
                     <p className="font-weight-bold">
                         {repoData.has_pages ?
-                        <a href={pagesLink} target="_blank">{repoData.name}</a>
+                        <a href={pagesLink} target="_blank" rel="noreferrer">{repoData.name}</a>
                         :
-                        <a href={repoData.html_url} target="_blank">{repoData.name}</a>
+                        <a href={repoData.html_url} target="_blank" rel="noreferrer">{repoData.name}</a>
                         }
                     </p>         
                 </div>

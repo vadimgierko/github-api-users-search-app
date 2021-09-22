@@ -1,4 +1,6 @@
-function ReposGroup({repo1, repo2, userName}) {
+import Repo from "./Repo";
+
+export default function ReposGroup({repo1, repo2, userName}) {
     console.log("ReposGroup got data:");
     console.log(repo1);
     console.log(repo2);
