@@ -2,7 +2,7 @@ export default function Repo({repoData, userName}) {
     if (repoData) {
         const pagesLink = `https://${userName}.github.io/${repoData.name}/`;
         return (
-            <div className="card mr-n3">
+            <div className="card me-n3">
                 <div className="card-header">
                     <p className="font-weight-bold">
                         {repoData.has_pages ?
