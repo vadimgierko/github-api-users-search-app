@@ -8,7 +8,7 @@ import App from './App';
 
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename="/github-api-users-search-app">
       <App />
     </BrowserRouter>
   </React.StrictMode>,
