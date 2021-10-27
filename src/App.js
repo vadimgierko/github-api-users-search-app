@@ -5,45 +5,36 @@ import Header from './components/Header';
 import HomePage from './components/HomePage';
 
 export default function App() {
-  const [inputedName, setInputedName] = useState();
-  const [userName, setUserName] = useState();
-  const [windowSize, setWindowSize] = useState(window.innerWidth);
+    const [inputedName, setInputedName] = useState();
+    const [userName, setUserName] = useState();
 
-  window.addEventListener("resize", () => {
-      setWindowSize(window.innerWidth);
-  });
-
-  function handleChange(e) {
-      setInputedName(e.target.value);
-      console.log(inputedName);
-  }
-  
-  function handleClick() {
-      setUserName(inputedName);
-  }
-
-  return (
+    function handleChange(e) {
+        setInputedName(e.target.value);
+        console.log(inputedName);
+    }
     
-        <div className="container-fluid">
+    function handleClick() {
+        setUserName(inputedName);
+    }
+
+    return (
+        <div className="App">
             <Header
-                windowSize={windowSize}
                 handleChange={handleChange}
                 handleClick={handleClick}
             />
-            <div>
-            <Switch>
-                <Route exact path="/">
-                    <HomePage windowSize={windowSize} />
-                </Route>
-                <Route path="/user-profile">
-                    <div style={{marginTop: `${windowSize > 610 ? "70px" : "110px"}`}}>
-                        <Info userName={userName} />
-                    </div>
-                </Route>
-            </Switch>
-            
+            <div className="container">
+                <Switch>
+                    <Route exact path="/">
+                        <HomePage />
+                    </Route>
+                    <Route path="/user-profile">
+                        <div style={{marginTop: 70}}>
+                            <Info userName={userName} />
+                        </div>
+                    </Route>
+                </Switch>
             </div>
         </div>
-    
-  );
+    );
 }

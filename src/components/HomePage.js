@@ -1,6 +1,6 @@
-export default function HomePage({ windowSize }) {
+export default function HomePage() {
     return (
-        <div style={{marginTop: `${windowSize > 610 ? "70px" : "110px"}`}}>
+        <div style={{marginTop: 70}}>
             <h1>What is  GitHub API Users Searching App?</h1>
             <p>This app allows you to find & view any user's basic profile info & public repositories published on GitHub!</p>
             <h3>How to use this App?</h3>
