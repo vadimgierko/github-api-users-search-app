@@ -16,7 +16,7 @@ export default function Header() {
                 <span className="navbar-brand mb-0 h1">
                     <i className="bi bi-github me-2" />
                     <Link
-                        to="/"
+                        to="/github-api-users-search-app/"
                         className="text-reset"
                         style={{textDecoration: "none"}}
                     >GitHub API Users Search App</Link>
@@ -47,7 +47,7 @@ export default function Header() {
                             onChange={(e) => setUserName(e.target.value)} 
                         />
                         <Link
-                            to={`/${userName}`}
+                            to={`/github-api-users-search-app/${userName}`}
                             type="button"
                             className={isNavCollapsed ? "btn btn-primary" : "btn btn-primary"}
                             onClick={!isNavCollapsed ? () => handleNavCollapse() : null}
