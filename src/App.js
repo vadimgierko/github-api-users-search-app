@@ -5,33 +5,20 @@ import Header from './components/Header';
 import HomePage from './components/HomePage';
 
 export default function App() {
-    const [inputedName, setInputedName] = useState();
-    const [userName, setUserName] = useState();
-
-    function handleChange(e) {
-        setInputedName(e.target.value);
-        console.log(inputedName);
-    }
     
-    function handleClick() {
-        setUserName(inputedName);
-    }
-
     return (
         <div className="App">
-            <Header
-                handleChange={handleChange}
-                handleClick={handleClick}
-            />
+            <Header />
             <div className="container">
                 <Switch>
                     <Route exact path="/">
                         <HomePage />
                     </Route>
-                    <Route path="/user-profile">
-                        <div style={{marginTop: 70}}>
-                            <Info userName={userName} />
-                        </div>
+                    <Route path="/about">
+                        <HomePage />
+                    </Route>
+                    <Route path="/:userName">
+                        <Info />
                     </Route>
                 </Switch>
             </div>

@@ -1,12 +1,14 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-export default function Header({ handleChange, handleClick}) {
+export default function Header() {
     const [isNavCollapsed, setIsNavCollapsed] = useState(true);
     
     const handleNavCollapse = () => {
         setIsNavCollapsed(!isNavCollapsed);
     };
+
+    const [userName, setUserName] = useState();
 
     return (
         <nav className="navbar navbar-expand-lg navbar-dark bg-secondary fixed-top">
@@ -34,7 +36,7 @@ export default function Header({ handleChange, handleClick}) {
                 <div className={`${isNavCollapsed ? "collapse" : null} navbar-collapse `} id="navbarColor01">
                     <ul className="navbar-nav me-auto">
                         <li className="nav-item">
-                            <Link className="nav-link" to="/" onClick={isNavCollapsed ? null : () => handleNavCollapse() }>About</Link>
+                            <Link className="nav-link" to="/about" onClick={isNavCollapsed ? null : () => handleNavCollapse() }>About</Link>
                         </li>
                     </ul>
                     <form className="d-flex">
@@ -42,18 +44,13 @@ export default function Header({ handleChange, handleClick}) {
                             type="text"
                             placeholder="github user's name here"
                             className={isNavCollapsed ? "form-control me-2" : "form-control me-2"}
-                            onChange={(e) => handleChange(e)} 
+                            onChange={(e) => setUserName(e.target.value)} 
                         />
                         <Link
-                            to="/user-profile"
+                            to={`/${userName}`}
                             type="button"
                             className={isNavCollapsed ? "btn btn-primary" : "btn btn-primary"}
-                            onClick={() => {
-                                handleClick();
-                                if (!isNavCollapsed) {
-                                    handleNavCollapse();
-                                }
-                            }}
+                            onClick={!isNavCollapsed ? () => handleNavCollapse() : null}
                         >
                             <i className="bi bi-search"></i>
                         </Link>     
