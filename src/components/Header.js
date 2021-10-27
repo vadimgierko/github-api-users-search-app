@@ -36,7 +36,7 @@ export default function Header() {
                 <div className={`${isNavCollapsed ? "collapse" : null} navbar-collapse `} id="navbarColor01">
                     <ul className="navbar-nav me-auto">
                         <li className="nav-item">
-                            <Link className="nav-link" to="/github-api-users-search-app/about" onClick={isNavCollapsed ? null : () => handleNavCollapse() }>About</Link>
+                            <Link className="nav-link" to="/about" onClick={isNavCollapsed ? null : () => handleNavCollapse() }>About</Link>
                         </li>
                     </ul>
                     <form className="d-flex">
@@ -47,7 +47,7 @@ export default function Header() {
                             onChange={(e) => setUserName(e.target.value)} 
                         />
                         <Link
-                            to={`/github-api-users-search-app/${userName}`}
+                            to={`/${userName}`}
                             type="button"
                             className={isNavCollapsed ? "btn btn-primary" : "btn btn-primary"}
                             onClick={!isNavCollapsed ? () => handleNavCollapse() : null}
