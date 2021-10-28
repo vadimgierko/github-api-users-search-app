@@ -2,6 +2,7 @@ import { Switch, Route } from 'react-router-dom';
 import Info from "./components/Info";
 import Header from './components/Header';
 import HomePage from './components/HomePage';
+import Footer from './components/Footer';
 
 export default function App() {
     
@@ -20,6 +21,7 @@ export default function App() {
                         <Info />
                     </Route>
                 </Switch>
+                <Footer />
             </div>
         </div>
     );
