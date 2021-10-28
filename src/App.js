@@ -10,13 +10,13 @@ export default function App() {
             <Header />
             <div className="container">
                 <Switch>
-                    <Route exact path="/github-api-users-search-app/">
+                    <Route exact path="/">
                         <HomePage />
                     </Route>
-                    <Route path="/github-api-users-search-app/about">
+                    <Route path="/about">
                         <HomePage />
                     </Route>
-                    <Route path="/github-api-users-search-app/:userName">
+                    <Route path="/:userName">
                         <Info />
                     </Route>
                 </Switch>
