@@ -20,7 +20,14 @@ export default function HomePage() {
             </ul>
             <h5>Note:</h5>
             <p>
-                This is the newest version of the app. <a href="https://github.com/vadimgierko/GitHub-Users-Search-App">Previous version</a> was built without using create-react-app. Current version is built with create-react-app & gh-pages deployment.
+                This is the newest version of the app.
+                <br />
+                <a href="https://github.com/vadimgierko/GitHub-Users-Search-App">Previous version</a> was built without:
+                <ul>
+                    <li>create-react-app...</li>
+                    <li>dynamic routing</li>
+                    <li>gh-pages deployment</li>
+                </ul>
             </p>
         </div>
     );
