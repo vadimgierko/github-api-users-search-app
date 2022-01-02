@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 
 export default function Header() {
@@ -9,6 +9,12 @@ export default function Header() {
     };
 
     const [userName, setUserName] = useState();
+
+    const inputRef = useRef(null);
+
+    useEffect(()=>{
+        inputRef.current.focus();
+    }, []);
 
     return (
         <nav className="navbar navbar-expand-lg navbar-dark bg-secondary fixed-top">
@@ -36,15 +42,20 @@ export default function Header() {
                 <div className={`${isNavCollapsed ? "collapse" : null} navbar-collapse `} id="navbarColor01">
                     <ul className="navbar-nav me-auto">
                         <li className="nav-item">
-                            <Link className="nav-link" to="/about" onClick={isNavCollapsed ? null : () => handleNavCollapse() }>About</Link>
+                            <Link
+                                className="nav-link"
+                                to="/about"
+                                onClick={isNavCollapsed ? null : () => handleNavCollapse()}
+                            >About</Link>
                         </li>
                     </ul>
                     <form className="d-flex">
                         <input
                             type="text"
-                            placeholder="github user's name here"
+                            placeholder="search by username"
                             className={isNavCollapsed ? "form-control me-2" : "form-control me-2"}
-                            onChange={(e) => setUserName(e.target.value)} 
+                            ref={inputRef}
+                            onChange={(e) => setUserName(e.target.value)}
                         />
                         <Link
                             to={`/${userName}`}
