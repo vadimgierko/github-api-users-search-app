@@ -1,24 +1,23 @@
-export default function Repo({repoData, userName}) {
+export default function Repo({ repoData, userName }) {
     if (repoData) {
         const pagesLink = `https://${userName}.github.io/${repoData.name}/`;
         return (
-            <div className="card me-n3">
+            <div className="card">
                 <div className="card-header">
-                    <p className="font-weight-bold">
-                        {repoData.has_pages ?
-                        <a href={pagesLink} target="_blank" rel="noreferrer">{repoData.name}</a>
-                        :
-                        <a href={repoData.html_url} target="_blank" rel="noreferrer">{repoData.name}</a>
-                        }
-                    </p>         
+                    <h5 className="font-weight-bold">{repoData.name}</h5>
+                    
+                    <p className="text-muted card-text">{repoData.created_at.slice(0, 10)} / {repoData.updated_at.slice(0, 10)}</p>  
                 </div>
                 <div className="card-body">
-                    <p><strong>Description:</strong> {repoData.description}.</p>
-                    <p><strong>Language:</strong> {repoData.language}.</p>
+                    <p className="card-text"><strong>Description:</strong> {repoData.description}</p>
+                    <p className="card-text"><strong>Language:</strong> {repoData.language}</p>
                 </div>
                 <div className="card-footer">
-                    <p><strong>Created at</strong> {repoData.created_at}</p>
-                    <p><strong>Last updated at</strong> {repoData.updated_at}</p>
+                    {repoData.has_pages
+                    ? <a className="btn btn-primary me-2" href={pagesLink} target="_blank" rel="noreferrer">Try the app</a>
+                    : null
+                    }
+                    <a className="btn btn-secondary" href={repoData.html_url} target="_blank" rel="noreferrer">See the code</a>
                 </div>
             </div>
         );

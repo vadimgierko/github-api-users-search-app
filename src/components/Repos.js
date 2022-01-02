@@ -1,7 +1,7 @@
 import ReposGroup from "./ReposGroup";
 
 export default function Repos({reposData, userName}) {
-    console.log(reposData);
+    //console.log(reposData);
     
     const repos = reposData.slice();
     const reposGroups = [];
@@ -14,14 +14,11 @@ export default function Repos({reposData, userName}) {
             reposGroups[Math.floor(i/2)].push(repos[i]);
         }
     }
-    
-    console.log(reposGroups);
+
     return (
         <div className="col-md-8">
             {reposGroups.map((repoGroup, i) => {
-                console.log(repoGroup[0]);
-                console.log(repoGroup[1]);
-                return <ReposGroup repo1={repoGroup[0]} repo2={repoGroup[1]} userName={userName} />
+                return <ReposGroup key={"repo-group-" + i} repo1={repoGroup[0]} repo2={repoGroup[1]} userName={userName} />
             })}  
         </div>
     );

@@ -5,7 +5,7 @@ export default function Bio(props) {
                 <div className="card-header">
                     <h3 className="text-center">{props.userName}</h3>         
                 </div>
-                <img className="card-img-top" src={props.avatarSrc} />
+                <img className="card-img-top" alt={props.userName + " avatar"} src={props.avatarSrc} />
                 <div className="card-body">
                     <p className="text-primary"><strong>Location:</strong> {props.location}</p>
                     <p className="text-primary"><strong>Public repositories:</strong> {props.reposNum}</p>

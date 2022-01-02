@@ -5,8 +5,8 @@ import Repos from "./Repos";
 
 export default function Info() {
 
-    const {userName} = useParams();
-    console.log(userName);
+    const { userName } = useParams();
+    //console.log(userName);
 
     const [userData, setUserData] = useState();
     const [reposData, setReposData] = useState();
@@ -17,14 +17,14 @@ export default function Info() {
         fetch(`https://api.github.com/users/${userName}`)
             .then(response => response.json())
             .then(data => {
-                console.log(data);
+                //console.log(data);
                 setUserData(data);
         });
 
         fetch(`https://api.github.com/users/${userName}/repos`)
             .then(response => response.json())
             .then(data => {
-                console.log(data);
+                //console.log(data);
                 setReposData(data);
         });
     }, [userName]);
