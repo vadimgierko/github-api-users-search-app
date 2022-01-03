@@ -17,7 +17,7 @@ export default function Header() {
     }, []);
 
     return (
-        <nav className="navbar navbar-expand-lg navbar-dark bg-secondary fixed-top">
+        <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
             <div className="container">
                 <span className="navbar-brand mb-0 h1">
                     <i className="bi bi-github me-2" />
@@ -53,7 +53,7 @@ export default function Header() {
                         <input
                             type="text"
                             placeholder="search by username"
-                            className={isNavCollapsed ? "form-control me-2" : "form-control me-2"}
+                            className="form-control me-2 bg-dark text-light"
                             ref={inputRef}
                             onChange={(e) => setUserName(e.target.value)}
                         />
